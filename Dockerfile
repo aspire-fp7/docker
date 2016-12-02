@@ -32,9 +32,10 @@ COPY files/framework/ /opt/framework
 RUN \
   mkdir -p /opt/framework/diablo/build/ && \
   cd /opt/framework/diablo/build/ && \
-  cmake -DCMAKE_BUILD_TYPE=Release .. && \
+  cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/opt/framework/diablo/install .. && \
   make && \
-  ln -s /opt/framework/diablo/build /opt/diablo
+  make install && \
+  ln -s /opt/framework/diablo/install/bin /opt/diablo
 
 # TODO: more advanced scripts that do symlinking might be needed eventually in that last step above!
 
