@@ -17,7 +17,7 @@ RUN \
   apt-get install -y binutils-multiarch gcc-multilib zlib1g:i386 && \
   # ACTC \
   apt-get install -y python python-pip && \
-  pip install doit && \
+  pip install doit==0.29.0 && \
   # ONLINE TECHNIQUES \
   apt-get install -y nginx php5-fpm python-dev libmysqlclient18 libmysqlclient-dev openjdk-7-jre binutils-dev tree
 # Warning: MySQL gets installed later on, because first the default pw is set
