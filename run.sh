@@ -22,7 +22,7 @@ then
   add_volume code-guards
   add_volume code-mobility
   add_volume diablo
-  add_volume docker-support
+  add_volume docker
   add_volume remote-attestation
   add_volume renewability
 fi
